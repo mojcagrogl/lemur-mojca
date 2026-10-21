@@ -1,0 +1,1 @@
+{"name":"lemur-mojca","version":"1.0.0","private":true,"type":"module","description":"Brezplačna PWA modna igra brez API-ja","scripts":{"dev":"node dev.mjs","test":"node --test tests/*.test.mjs"},"engines":{"node":">=20"}}

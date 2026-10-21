@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="sl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#343d2e">
+  <meta name="description" content="Lemur — tvoj mali modni ritual. Fotografiraj outfit in odkrij igrivo modno oceno z nasvetom.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Lemur · Mojca Urlep</title>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="./" aria-label="Lemur, domov"><span class="brand-mark">l.</span><span>lemur<small>MOJCA URLEP</small></span></a><button class="text-button" id="install">Namesti aplikacijo ↗</button></header>
+  <main>
+    <section class="intro"><div class="eyebrow"><span class="dot"></span> TVOJ MALI MODNI RITUAL</div><h1>Kako se danes<br><em>nosiš?</em><span class="spark">✳</span></h1><p>En outfit. Svež pogled. Malo navdiha.<br>Ujemi svoj videz in odkrij svoj Lemur trenutek.</p></section>
+    <div class="workspace">
+      <section class="photo-card" aria-label="Fotografija outfita">
+        <div id="photo-area" class="photo-area">
+          <div id="placeholder" class="placeholder"><span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span><svg class="outfit-art" viewBox="0 0 240 290" fill="none" aria-hidden="true"><path d="M120 35c-20 0-19 17-8 22l8 4v15M120 76L43 115q-13 9 0 12h154q13-3 0-12L120 76Z" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="m83 102-34 26-19 52 33 13 16-34-8 91h98l-8-91 16 34 33-13-19-52-34-26q-36 33-74 0Z" fill="#ddd5c7" stroke="currentColor" stroke-width="2"/><path d="m120 117-12 29 12 27 12-27-12-29Z" fill="#737951"/><path d="M87 218h66M85 230h70" stroke="#a39d8a" stroke-width="2"/></svg><span class="photo-title">Tvoj outfit je glavna zvezda.</span><span class="photo-note">Fotografiraj se od glave do pet<br>v dobri, naravni svetlobi.</span></div>
+          <img id="preview" alt="Predogled izbrane fotografije outfita" hidden>
+          <button id="remove" class="remove" aria-label="Odstrani fotografijo" hidden>×</button>
+          <span class="photo-label">01 / TVOJ VIDEZ</span>
+        </div>
+        <div class="photo-actions"><button class="button primary" id="camera">◎ &nbsp; Fotografiraj outfit</button><button class="button secondary" id="upload">↑ &nbsp; Izberi fotografijo</button></div>
+        <input type="file" id="camera-input" accept="image/*" capture="environment" hidden><input type="file" id="file-input" accept="image/*" hidden>
+        <p class="privacy">⌁ Fotografija ostane samo na tvoji napravi.</p>
+      </section>
+      <section class="consultation" aria-label="Modni nasvet">
+        <div class="section-label">02 / TVOJ TRENUTEK</div><h2>Dodaj malo<br><em>konteksta.</em></h2><p class="muted">Kam te danes vodi dan?</p>
+        <div class="occasions" role="group" aria-label="Priložnost"><button class="chip selected" data-occasion="everyday" aria-pressed="true">Vsak dan</button><button class="chip" data-occasion="work" aria-pressed="false">V službo</button><button class="chip" data-occasion="evening" aria-pressed="false">Večerni izhod</button><button class="chip" data-occasion="special" aria-pressed="false">Poseben dan</button></div>
+        <label class="field-label" for="feeling">Kako se počutiš v tem outfitu?</label><select id="feeling"><option value="unsure">Še iščem tisti pravi občutek</option><option value="comfortable">Udobno in sproščeno</option><option value="confident">Odlično, to sem jaz!</option></select>
+        <button id="rate" class="button primary rate" disabled>Odkrij svojo oceno <span>↗</span></button><p id="status" role="status" aria-live="polite" class="status">Začni s fotografijo svojega outfita.</p>
+        <div class="honesty"><span>✳</span><p><strong>Moda je igra, ne izpit.</strong> To je zabavna ocena po preprostih pravilih in tvojih odgovorih. Ni AI analiza ali osebno mnenje Mojce Urlep.</p></div>
+      </section>
+    </div>
+    <section id="result" class="result" hidden tabindex="-1" aria-labelledby="result-title"><div class="score-column"><div class="section-label">TVOJ LEMUR TRENUTEK</div><div class="score"><span id="score">0</span><span class="score-max">/ 100</span></div><span class="score-tag">IGRIVA OCENA</span></div><div class="result-copy"><h2 id="result-title"></h2><p id="verdict"></p><div class="tip"><span>MAJHEN STILSKI NAMIG</span><p id="tip"></p></div><p class="result-disclaimer">Ocena je ustvarjena za zabavo. Aplikacija ne prepoznava oblačil ali presoja, kako ti pristajajo.</p><button class="text-button" id="again">Poskusi z drugim outfitom ↗</button></div></section>
+    <section class="bottom-note"><span>»</span><p>Najboljši kos v tvoji omari?<br><em>Tisti, v katerem se počutiš kot ti.</em></p><small>LEMUR · MODNI NAVDIH ZA VSAK DAN</small></section>
+  </main>
+  <footer><span>lemur · Mojca Urlep</span><button id="about" class="text-button">Kako deluje?</button><span>Brez prijave. Brez naročnine.</span></footer>
+  <dialog id="info"><button class="close-dialog" aria-label="Zapri">×</button><h2>Malo navdiha.<br><em>Čisto brez pritiska.</em></h2><p>Lemur je brezplačna modna igra. Fotografijo uporabi samo v tvojem brskalniku. Ne pošilja je na strežnik, je ne shranjuje trajno in ne uporablja AI.</p><p>Igriva ocena 1–100 je izračunana iz digitalnega odtisa fotografije in tvojega izbranega počutja. Priložnost izbere vnaprej napisan splošen nasvet. Ista fotografija z istimi odgovori dobi isti rezultat. Številka ni strokovna presoja outfita, telesa ali privlačnosti.</p><p>Za namestitev na iPhonu uporabi Safari → Deli → Dodaj na začetni zaslon. Na Androidu odpri meni brskalnika in izberi Namesti aplikacijo oziroma Dodaj na začetni zaslon. Namestitev je na voljo prek HTTPS; po prvem obisku aplikacija deluje tudi brez povezave.</p><button class="button primary close-info">Razumem, gremo ustvarjat</button></dialog>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
